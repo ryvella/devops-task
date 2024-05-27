@@ -1,0 +1,7 @@
+kubectl apply -f namespace.yaml
+kubectl apply -f crd.yaml
+kubectl apply -f rbac
+kubectl apply -f operator.yaml
+
+kubectl apply -f k8s/mongodb/internal/secret.yaml
+kubectl apply -f k8s/mongodb/internal/mongodb.yaml

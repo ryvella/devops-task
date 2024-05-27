@@ -1,0 +1,3 @@
+kubectl apply -f namespace.yaml
+kubectl apply -f prometheusdeployment.yaml
+kubectl apply -f grafanadeployment.yaml

@@ -1,0 +1,18 @@
+# Used slim version to keep the image small
+FROM python:3.11-slim
+
+WORKDIR /ping_app
+
+COPY requirements.txt ./
+COPY .env ./
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY app.py ./
+
+EXPOSE 5000
+
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+
+CMD ["flask", "run"]
